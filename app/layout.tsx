@@ -4,6 +4,7 @@ import "./globals.css"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
+import { ScrollProgress } from "@/components/ScrollProgress"
 import { StructuredData } from "@/components/StructuredData"
 import { siteConfig } from "@/lib/constants"
 
@@ -68,6 +69,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} ${inter.variable}`}>
         <StructuredData />
+        <ScrollProgress />
         <Header />
         <main>{children}</main>
         <Footer />

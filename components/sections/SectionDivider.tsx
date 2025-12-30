@@ -1,7 +1,7 @@
 "use client"
 
 export function SectionDivider() {
-  const text = "Project Excellence, Strategic Leadership"
+  const text = "Enterprise Backend Systems • Microservices Architecture • Cloud Infrastructure • Automation & DevOps • Generative AI Innovation"
   const separator = "\t\t"
   const repeatedText = Array(1).fill(text).join(separator)
 

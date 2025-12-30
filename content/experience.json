@@ -6,12 +6,12 @@
     "location": "Bangalore, India",
     "startDate": "2019-05",
     "endDate": null,
-    "description": "Designed and maintained backend services for an in-house application supporting order fulfillment in supply chain and retail eCommerce. Led complex problem-solving initiatives and feature development while coordinating across multiple teams.",
+    "description": "Architect and maintain mission-critical backend services powering order fulfillment operations across supply chain and e-commerce platforms. Drive technical initiatives by leading cross-functional collaboration, solving complex system challenges, and delivering high-impact features that enhance business capabilities.",
     "achievements": [
-      "Developed highly scalable backend applications using Java and Spring Boot",
-      "Provided technical mentorship to new team members, improving onboarding efficiency and knowledge sharing",
-      "Automated recurring operational fixes and productionized changes to enhance system stability and reduce downtime",
-      "Led complex problem-solving initiatives and feature development while coordinating across multiple teams"
+      "Engineered highly scalable backend applications leveraging Java and Spring Boot frameworks, supporting enterprise-level transaction volumes",
+      "Established technical mentorship programs for incoming engineers, significantly accelerating team onboarding and fostering knowledge transfer",
+      "Implemented automated operational workflows and production-ready solutions that improved system reliability and minimized service disruptions",
+      "Orchestrated complex technical problem-solving efforts and feature development across distributed teams, ensuring alignment and timely delivery"
     ],
     "technologies": ["Java", "Spring Boot", "Microservices", "AWS", "DevOps"]
   },
@@ -22,12 +22,12 @@
     "location": "Bangalore, India",
     "startDate": "2017-10",
     "endDate": "2019-05",
-    "description": "Worked in the Infrastructure (Platform Engineering) team, developing RESTful APIs and managing cloud infrastructure. Designed and maintained production cloud servers, ensuring high availability and scalability.",
+    "description": "Contributed to the Platform Engineering team by developing robust RESTful APIs and managing enterprise cloud infrastructure. Architected and maintained production-grade cloud environments with a focus on high availability, scalability, and operational excellence.",
     "achievements": [
-      "Automated microservices deployment and management using Ansible, reducing manual interventions by 40%",
-      "Developed scripts for automating Amazon Machine Image (AMI) creation for seamless infrastructure scaling",
-      "Created an internal web console that streamlined staging and production environment management for engineering teams",
-      "Designed and maintained production cloud servers, ensuring high availability and scalability"
+      "Engineered Ansible-based automation pipelines for microservices deployment and lifecycle management, achieving a 40% reduction in manual operational overhead",
+      "Developed automated tooling for Amazon Machine Image (AMI) generation, enabling rapid and consistent infrastructure scaling across environments",
+      "Built an internal web-based management console that simplified staging and production environment operations, improving developer productivity",
+      "Designed and maintained resilient cloud server infrastructure, ensuring optimal performance and reliability for production workloads"
     ],
     "technologies": ["Java", "RESTful APIs", "AWS", "Ansible", "Cloud Infrastructure", "Microservices"]
   },
@@ -38,12 +38,12 @@
     "location": "Pune, India",
     "startDate": "2015-08",
     "endDate": "2017-10",
-    "description": "Developed and enhanced online banking web applications for businesses, improving user experience and security. Implemented new features in the online loan application process, optimizing the customer journey.",
+    "description": "Developed and enhanced enterprise-grade online banking applications, focusing on improving user experience, security posture, and business functionality. Implemented strategic features in digital loan processing workflows, optimizing customer engagement and operational efficiency.",
     "achievements": [
-      "Restructured the main UI using AngularJS, improving navigation and user interaction",
-      "Integrated web analytics (Site Catalyst) to track and enhance customer engagement metrics",
-      "Implemented new features in the online loan application process, optimizing the customer journey",
-      "Developed and enhanced online banking web applications for businesses, improving user experience and security"
+      "Modernized user interface architecture using AngularJS, resulting in improved navigation patterns and enhanced user interaction capabilities",
+      "Integrated comprehensive web analytics solutions (Site Catalyst) to enable data-driven insights and measure customer engagement metrics",
+      "Delivered new features for online loan application workflows, streamlining the customer journey and reducing processing friction",
+      "Enhanced security and functionality of business banking web applications, contributing to improved user trust and platform reliability"
     ],
     "technologies": ["Java", "JSP", "Struts", "Spring Framework", "AngularJS", "Web Analytics"]
   }

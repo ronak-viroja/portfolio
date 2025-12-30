@@ -35,3 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# docs folder (reference only, not for deployment)
+/docs
+

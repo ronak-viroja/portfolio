@@ -1,32 +1,12 @@
 [
   {
-    "id": "ach-1",
-    "title": "Oracle Certified Associate",
-    "description": "Acquired Oracle Certified Associate, Java SE 8 Programmer Certification with 92% in May 2017."
-  },
-  {
     "id": "ach-2",
     "title": "Research Work - Automatic Plant Detection",
-    "description": "Worked on 'Automatic Plant Species Recognition Technique Using Machine Learning Approaches' and built a working model during the academic project. Research paper presented at CoCoNet'15, IEEE. Published in IEEE (https://ieeexplore.ieee.org/document/7411268)."
+    "description": "Conducted academic research on 'Automatic Plant Species Recognition Technique Using Machine Learning Approaches,' developing a functional prototype and contributing to a research paper presented at CoCoNet'15, IEEE. The work was subsequently published in IEEE Xplore (https://ieeexplore.ieee.org/document/7411268), showcasing expertise in machine learning and computer vision applications."
   },
   {
-    "id": "ach-3",
-    "title": "Infrastructure Automation Excellence",
-    "description": "Automated microservices deployment and management using Ansible, reducing manual interventions by 40% at Tracxn Technologies."
-  },
-  {
-    "id": "ach-4",
-    "title": "Technical Mentorship",
-    "description": "Provided technical mentorship to new team members at Walmart Global Tech, improving onboarding efficiency and knowledge sharing."
-  },
-  {
-    "id": "ach-5",
-    "title": "System Stability Enhancement",
-    "description": "Automated recurring operational fixes and productionized changes to enhance system stability and reduce downtime at Walmart Global Tech."
-  },
-  {
-    "id": "ach-6",
-    "title": "Generative AI Exploration",
-    "description": "Building an AI-powered photo app to ease posting for enthusiastic social media users. Exploring prompt engineering & model fine-tuning to improve AI-generated insights and response accuracy."
+    "id": "ach-1",
+    "title": "Oracle Certified Associate",
+    "description": "Earned Oracle Certified Associate, Java SE 8 Programmer certification with a score of 92% in May 2017, demonstrating advanced proficiency in Java programming fundamentals and object-oriented design principles."
   }
 ]
