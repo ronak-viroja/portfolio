@@ -3,7 +3,7 @@
     "id": "edu-1",
     "degree": "Master of Computer Applications",
     "institution": "Gujarat University",
-    "location": "Gujarat, India",
+    "location": "Ahmedabad, Gujarat, India",
     "startDate": "2012",
     "endDate": "2015",
     "gpa": "79.66%"
@@ -12,7 +12,7 @@
     "id": "edu-2",
     "degree": "Bachelor of Commerce",
     "institution": "Saurashtra University",
-    "location": "Gujarat, India",
+    "location": "Rajkot, Gujarat, India",
     "startDate": "2009",
     "endDate": "2012",
     "gpa": "70.45%"

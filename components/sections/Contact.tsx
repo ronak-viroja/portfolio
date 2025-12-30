@@ -3,7 +3,8 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { Send } from "lucide-react"
+import { Send, CheckCircle, XCircle } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 export function Contact() {
   const ref = useRef(null)
@@ -16,16 +17,56 @@ export function Contact() {
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
+    setSubmitStatus("idle")
+    setErrorMessage("")
+
+    try {
+      // EmailJS configuration - these will come from environment variables
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || ""
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || ""
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("Email service is not configured. Please set up EmailJS environment variables.")
+      }
+
+      // Prepare template parameters
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        phone: formData.phone || "Not provided",
+        message: formData.message,
+        to_name: "Ronak Viroja",
+      }
+
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+
+      // Success
+      setSubmitStatus("success")
       setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" })
-      alert("Thank you for your message! I'll get back to you soon.")
-    }, 1000)
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus("idle")
+      }, 5000)
+    } catch (error) {
+      console.error("EmailJS error:", error)
+      setSubmitStatus("error")
+      setErrorMessage(
+        error instanceof Error 
+          ? error.message 
+          : "Failed to send message. Please try again later or contact me directly via LinkedIn."
+      )
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -127,6 +168,21 @@ export function Contact() {
                     placeholder="Enter your message"
                   />
                 </div>
+
+                {/* Submit Status Messages */}
+                {submitStatus === "success" && (
+                  <div className="flex items-center gap-2 text-green-600 bg-green-50 px-4 py-3 rounded-lg">
+                    <CheckCircle className="w-5 h-5" />
+                    <span className="text-sm font-medium">Thank you! Your message has been sent successfully. I'll get back to you soon.</span>
+                  </div>
+                )}
+
+                {submitStatus === "error" && (
+                  <div className="flex items-start gap-2 text-red-600 bg-red-50 px-4 py-3 rounded-lg">
+                    <XCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm font-medium">{errorMessage}</span>
+                  </div>
+                )}
 
                 {/* Submit Button */}
                 <button

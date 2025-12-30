@@ -43,9 +43,6 @@ export function EducationSection() {
                   {edu.location && (
                     <p className="text-base text-[#0A1028]/60">{edu.location}</p>
                   )}
-                  {edu.gpa && (
-                    <p className="text-sm text-[#0A1028]/50 mt-2">GPA: {edu.gpa}</p>
-                  )}
                 </div>
               ))}
             </motion.div>

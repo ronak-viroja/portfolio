@@ -4,7 +4,6 @@ import { ExperienceSection } from "@/components/sections/Experience"
 import { EducationSection } from "@/components/sections/Education"
 import { SectionDivider } from "@/components/sections/SectionDivider"
 import { AchievementsSection } from "@/components/sections/Achievements"
-import { Contact } from "@/components/sections/Contact"
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       <EducationSection />
       <SectionDivider />
       <AchievementsSection />
-      <Contact />
     </>
   )
 }

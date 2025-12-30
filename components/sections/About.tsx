@@ -77,29 +77,28 @@ export function About() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative w-full aspect-[4/3] rounded-lg overflow-hidden"
+                className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-[#0A1028]/20"
               >
-                {/* Placeholder for professional image - user should replace with actual image */}
-                <div className="w-full h-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center border border-white/10">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-lg bg-white/10 flex items-center justify-center">
-                      <svg className="w-12 h-12 text-white/30" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-sm text-white/50">Professional Image</p>
-                    <p className="text-xs text-white/40 mt-1">Add your image here</p>
-                  </div>
-                </div>
-                {/* Uncomment and use this when you have an image:
+                {/* Blurred background image */}
                 <Image
-                  src="/images/about-professional.jpg"
-                  alt="Professional workspace"
+                  src="/images/about-professional.png"
+                  alt=""
                   fill
-                  className="object-cover"
+                  className="object-cover blur-md scale-110 opacity-30"
                   priority
+                  aria-hidden="true"
                 />
-                */}
+                {/* Main image - fully visible */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src="/images/about-professional.png"
+                    alt="Ronak Viroja - Professional workspace"
+                    width={800}
+                    height={600}
+                    className="object-contain max-w-full max-h-full rounded-lg"
+                    priority
+                  />
+                </div>
               </motion.div>
 
               {/* Second Paragraph - Right */}
