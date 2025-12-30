@@ -35,7 +35,7 @@ export function Footer() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-4 flex flex-col items-center"
             >
-              <h4 className="text-lg font-semibold text-white mb-4 text-center">Let's Connect</h4>
+              <h4 className="text-lg font-semibold text-white mb-4 text-center">Let&apos;s Connect</h4>
               <motion.a
                 href={siteConfig.links.linkedin}
                 target="_blank"

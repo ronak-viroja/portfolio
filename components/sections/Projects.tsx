@@ -34,7 +34,7 @@ export function Projects() {
         >
           <h2 className="text-4xl font-bold mb-4 text-center">Projects</h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            A collection of projects I've worked on, showcasing my skills and experience.
+            A collection of projects I&apos;ve worked on, showcasing my skills and experience.
           </p>
 
           {/* Filter Buttons */}
