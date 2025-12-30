@@ -6,7 +6,7 @@ export const siteConfig = {
   ogImage: "/og-image.jpg",
   links: {
     github: "https://github.com/ronakviroja",
-    linkedin: "https://linkedin.com/in/ronak-viroja-857212a6",
+    linkedin: "https://www.linkedin.com/in/ronakviroja",
     twitter: "",
     email: "ronakviroja@gmail.com",
   },
