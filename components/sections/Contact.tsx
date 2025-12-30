@@ -173,7 +173,7 @@ export function Contact() {
                 {submitStatus === "success" && (
                   <div className="flex items-center gap-2 text-green-600 bg-green-50 px-4 py-3 rounded-lg">
                     <CheckCircle className="w-5 h-5" />
-                    <span className="text-sm font-medium">Thank you! Your message has been sent successfully. I'll get back to you soon.</span>
+                    <span className="text-sm font-medium">Thank you! Your message has been sent successfully. I&apos;ll get back to you soon.</span>
                   </div>
                 )}
 
