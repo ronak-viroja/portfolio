@@ -7,7 +7,7 @@ import Image from "next/image"
 
 export function About() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: false, margin: "-100px" })
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -61,9 +61,9 @@ export function About() {
 
             {/* First Paragraph - Full Width */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-6xl text-justify">
                 With over a decade of experience in enterprise software engineering, I have established a strong foundation in developing and maintaining large-scale backend systems that power critical business operations. My expertise spans microservices architecture, cloud infrastructure management, and DevOps practices, with a particular strength in Java and Spring Boot ecosystems. Throughout my career, I have consistently delivered scalable solutions while fostering collaborative environments and contributing to technical excellence through mentorship and knowledge sharing.
@@ -74,9 +74,10 @@ export function About() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               {/* Image Card - Left */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={{ opacity: 0, x: -50, scale: 0.95 }}
+                animate={isInView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0, x: -50, scale: 0.95 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+                whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
                 className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-[#0A1028]/20"
               >
                 {/* Blurred background image */}
@@ -103,21 +104,29 @@ export function About() {
 
               {/* Second Paragraph - Right */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                initial={{ opacity: 0, x: 50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                 className="space-y-8"
               >
-                <p className="text-base sm:text-lg text-white/80 leading-relaxed text-justify">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="text-base sm:text-lg text-white/80 leading-relaxed text-justify"
+                >
                   I am deeply engaged in exploring the transformative potential of Generative AI and advanced automation technologies, continuously expanding my knowledge in prompt engineering and AI-driven application development. My technical focus centers on architecting distributed systems, designing robust APIs, and implementing comprehensive automation strategies that enhance operational efficiency. I am committed to driving performance optimization initiatives and leveraging cutting-edge technologies to solve complex engineering challenges.
-                </p>
+                </motion.p>
 
                 {/* CTA Button */}
                 <motion.button
                   onClick={() => scrollToSection("achievements")}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
                   className="px-8 py-4 bg-[#87CEEB] text-[#0A1028] rounded-full font-semibold text-lg hover:bg-[#7BB8D4] transition-colors shadow-sm"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Discover More
                 </motion.button>

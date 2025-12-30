@@ -10,7 +10,7 @@ const educations = educationData as Education[]
 
 export function EducationSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: false, margin: "-100px" })
 
   return (
     <section id="education" className="py-24 bg-[#e8ebf2] text-[#0A1028]" ref={ref}>
@@ -37,13 +37,20 @@ export function EducationSection() {
               className="space-y-0"
             >
               {educations.map((edu, index) => (
-                <div key={edu.id} className="py-6 border-b border-[#0A1028]/10 last:border-b-0">
+                <motion.div
+                  key={edu.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
+                  whileHover={{ x: 5, transition: { duration: 0.3 } }}
+                  className="py-6 border-b border-[#0A1028]/10 last:border-b-0 hover:bg-[#0A1028]/5 rounded-lg px-4 -mx-4 transition-colors"
+                >
                   <h3 className="text-xl font-semibold text-[#0A1028] mb-1">{edu.degree}</h3>
                   <p className="text-lg text-[#0A1028]/70 mb-1">{edu.institution}</p>
                   {edu.location && (
                     <p className="text-base text-[#0A1028]/60">{edu.location}</p>
                   )}
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           </div>

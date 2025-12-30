@@ -10,7 +10,7 @@ const achievements = achievementsData as Achievement[]
 
 export function AchievementsSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: false, margin: "-100px" })
 
   return (
     <section id="achievements" className="py-24 bg-[#e8ebf2] text-[#0A1028]" ref={ref}>
@@ -42,7 +42,14 @@ export function AchievementsSection() {
                 const parts = achievement.description.split(urlRegex)
                 
                 return (
-                  <div key={achievement.id} className="py-6 border-b border-[#0A1028]/10 last:border-b-0">
+                  <motion.div
+                    key={achievement.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
+                    whileHover={{ x: 5, transition: { duration: 0.3 } }}
+                    className="py-6 border-b border-[#0A1028]/10 last:border-b-0 hover:bg-[#0A1028]/5 rounded-lg px-4 -mx-4 transition-colors"
+                  >
                     <h3 className="text-xl font-semibold text-[#0A1028] mb-1">{achievement.title}</h3>
                     <p className="text-base text-[#0A1028]/70 leading-relaxed text-justify">
                       {parts.map((part, i) => {
@@ -62,7 +69,7 @@ export function AchievementsSection() {
                         return <span key={i}>{part}</span>
                       })}
                     </p>
-                  </div>
+                  </motion.div>
                 )
               })}
             </motion.div>

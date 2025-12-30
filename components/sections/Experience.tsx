@@ -11,7 +11,7 @@ const experiences = experienceData as Experience[]
 
 export function ExperienceSection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: false, margin: "-100px" })
 
   return (
     <section id="experience" className="py-24 bg-[#0A1028] text-white" ref={ref}>
@@ -34,10 +34,15 @@ export function ExperienceSection() {
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="grid md:grid-cols-2 gap-8"
+                initial={{ opacity: 0, y: 30, x: -20 }}
+                animate={isInView ? { opacity: 1, y: 0, x: 0 } : { opacity: 0, y: 30, x: -20 }}
+                transition={{ 
+                  duration: 0.7, 
+                  delay: index * 0.15,
+                  ease: [0.25, 0.1, 0.25, 1]
+                }}
+                whileHover={{ x: 5, transition: { duration: 0.3 } }}
+                className="grid md:grid-cols-2 gap-8 p-6 rounded-lg hover:bg-white/5 transition-colors"
               >
                 {/* Left Column: Role + Industry */}
                 <div>
@@ -61,10 +66,23 @@ export function ExperienceSection() {
                   {exp.achievements.length > 0 && (
                     <ul className="space-y-2">
                       {exp.achievements.slice(0, 3).map((achievement, i) => (
-                        <li key={i} className="text-sm text-white/70 flex items-start gap-2">
-                          <span className="text-white/50 mt-1">•</span>
+                        <motion.li
+                          key={i}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                          transition={{ duration: 0.5, delay: index * 0.15 + i * 0.1 + 0.3 }}
+                          className="text-sm text-white/70 flex items-start gap-2"
+                        >
+                          <motion.span
+                            initial={{ scale: 0 }}
+                            animate={isInView ? { scale: 1 } : { scale: 0 }}
+                            transition={{ duration: 0.3, delay: index * 0.15 + i * 0.1 + 0.4 }}
+                            className="text-white/50 mt-1"
+                          >
+                            •
+                          </motion.span>
                           <span>{achievement}</span>
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
                   )}
