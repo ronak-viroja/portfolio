@@ -1,0 +1,50 @@
+[
+  {
+    "id": "exp-1",
+    "title": "Senior Software Engineer",
+    "company": "Walmart Global Tech",
+    "location": "Bangalore, India",
+    "startDate": "2019-05",
+    "endDate": null,
+    "description": "Designed and maintained backend services for an in-house application supporting order fulfillment in supply chain and retail eCommerce. Led complex problem-solving initiatives and feature development while coordinating across multiple teams.",
+    "achievements": [
+      "Developed highly scalable backend applications using Java and Spring Boot",
+      "Provided technical mentorship to new team members, improving onboarding efficiency and knowledge sharing",
+      "Automated recurring operational fixes and productionized changes to enhance system stability and reduce downtime",
+      "Led complex problem-solving initiatives and feature development while coordinating across multiple teams"
+    ],
+    "technologies": ["Java", "Spring Boot", "Microservices", "AWS", "DevOps"]
+  },
+  {
+    "id": "exp-2",
+    "title": "Senior Software Engineer",
+    "company": "Tracxn Technologies",
+    "location": "Bangalore, India",
+    "startDate": "2017-10",
+    "endDate": "2019-05",
+    "description": "Worked in the Infrastructure (Platform Engineering) team, developing RESTful APIs and managing cloud infrastructure. Designed and maintained production cloud servers, ensuring high availability and scalability.",
+    "achievements": [
+      "Automated microservices deployment and management using Ansible, reducing manual interventions by 40%",
+      "Developed scripts for automating Amazon Machine Image (AMI) creation for seamless infrastructure scaling",
+      "Created an internal web console that streamlined staging and production environment management for engineering teams",
+      "Designed and maintained production cloud servers, ensuring high availability and scalability"
+    ],
+    "technologies": ["Java", "RESTful APIs", "AWS", "Ansible", "Cloud Infrastructure", "Microservices"]
+  },
+  {
+    "id": "exp-3",
+    "title": "System Engineer",
+    "company": "Tata Consultancy Services",
+    "location": "Pune, India",
+    "startDate": "2015-08",
+    "endDate": "2017-10",
+    "description": "Developed and enhanced online banking web applications for businesses, improving user experience and security. Implemented new features in the online loan application process, optimizing the customer journey.",
+    "achievements": [
+      "Restructured the main UI using AngularJS, improving navigation and user interaction",
+      "Integrated web analytics (Site Catalyst) to track and enhance customer engagement metrics",
+      "Implemented new features in the online loan application process, optimizing the customer journey",
+      "Developed and enhanced online banking web applications for businesses, improving user experience and security"
+    ],
+    "technologies": ["Java", "JSP", "Struts", "Spring Framework", "AngularJS", "Web Analytics"]
+  }
+]

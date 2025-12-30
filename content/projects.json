@@ -1,0 +1,75 @@
+[
+  {
+    "id": "project-1",
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce platform with modern UI and seamless shopping experience.",
+    "longDescription": "Built a comprehensive e-commerce platform featuring product catalog, shopping cart, payment integration, and admin dashboard. Implemented real-time inventory management and order tracking system.",
+    "image": "/images/projects/ecommerce.jpg",
+    "technologies": ["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com/example/ecommerce",
+    "featured": true,
+    "date": "2024-11-15"
+  },
+  {
+    "id": "project-2",
+    "title": "Task Management App",
+    "description": "Collaborative task management application with real-time updates and team collaboration features.",
+    "longDescription": "Developed a Kanban-style task management application with real-time synchronization, drag-and-drop functionality, and team collaboration features. Includes user authentication, role-based access control, and notification system.",
+    "image": "/images/projects/taskmanager.jpg",
+    "technologies": ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "WebSockets"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com/example/taskmanager",
+    "featured": true,
+    "date": "2024-09-20"
+  },
+  {
+    "id": "project-3",
+    "title": "Weather Dashboard",
+    "description": "Beautiful weather dashboard with location-based forecasts and interactive maps.",
+    "longDescription": "Created a responsive weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics. Features include 7-day forecasts, hourly predictions, and weather alerts.",
+    "image": "/images/projects/weather.jpg",
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "OpenWeather API"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com/example/weather",
+    "featured": true,
+    "date": "2024-07-10"
+  },
+  {
+    "id": "project-4",
+    "title": "Social Media Analytics",
+    "description": "Analytics dashboard for tracking social media performance and engagement metrics.",
+    "longDescription": "Built an analytics dashboard that aggregates data from multiple social media platforms. Features include real-time metrics, customizable reports, and data visualization with interactive charts.",
+    "image": "/images/projects/analytics.jpg",
+    "technologies": ["Vue.js", "Python", "Django", "Chart.js", "REST API"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com/example/analytics",
+    "featured": false,
+    "date": "2024-05-05"
+  },
+  {
+    "id": "project-5",
+    "title": "Fitness Tracker",
+    "description": "Mobile-first fitness tracking application with workout plans and progress tracking.",
+    "longDescription": "Developed a comprehensive fitness tracking app with workout plans, progress tracking, and social features. Includes exercise database, custom workout creation, and progress visualization.",
+    "image": "/images/projects/fitness.jpg",
+    "technologies": ["React Native", "TypeScript", "Firebase", "Expo"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com/example/fitness",
+    "featured": false,
+    "date": "2024-03-18"
+  },
+  {
+    "id": "project-6",
+    "title": "Blog Platform",
+    "description": "Modern blog platform with markdown support and beautiful typography.",
+    "longDescription": "Created a full-featured blog platform with markdown support, syntax highlighting, and SEO optimization. Features include tag system, search functionality, and RSS feed generation.",
+    "image": "/images/projects/blog.jpg",
+    "technologies": ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com/example/blog",
+    "featured": false,
+    "date": "2024-01-12"
+  }
+]
+
