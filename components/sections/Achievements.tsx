@@ -36,12 +36,35 @@ export function AchievementsSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-0"
             >
-              {achievements.map((achievement, index) => (
-                <div key={achievement.id} className="py-6 border-b border-[#0A1028]/10 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-[#0A1028] mb-1">{achievement.title}</h3>
-                  <p className="text-base text-[#0A1028]/70 leading-relaxed text-justify">{achievement.description}</p>
-                </div>
-              ))}
+              {achievements.map((achievement, index) => {
+                // Extract URL from description and replace it with a clickable link
+                const urlRegex = /(https?:\/\/[^\s\)]+)/g
+                const parts = achievement.description.split(urlRegex)
+                
+                return (
+                  <div key={achievement.id} className="py-6 border-b border-[#0A1028]/10 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-[#0A1028] mb-1">{achievement.title}</h3>
+                    <p className="text-base text-[#0A1028]/70 leading-relaxed text-justify">
+                      {parts.map((part, i) => {
+                        if (part.match(/^https?:\/\//)) {
+                          return (
+                            <a
+                              key={i}
+                              href={part}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 underline hover:text-blue-700 transition-colors font-medium"
+                            >
+                              {part}
+                            </a>
+                          )
+                        }
+                        return <span key={i}>{part}</span>
+                      })}
+                    </p>
+                  </div>
+                )
+              })}
             </motion.div>
           </div>
         </div>

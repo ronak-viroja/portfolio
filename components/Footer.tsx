@@ -51,6 +51,14 @@ export function Footer() {
                 <a href="/#contact" className="text-white/80 hover:text-white transition-colors text-sm">
                   Contact
                 </a>
+                <a
+                  href="https://ieeexplore.ieee.org/document/7411268"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors text-sm"
+                >
+                  IEEE Research Paper
+                </a>
               </nav>
             </div>
           </div>

@@ -55,7 +55,8 @@ export function About() {
               className="space-y-2"
             >
               <h2 className="text-5xl sm:text-6xl font-semibold text-white">About</h2>
-              <p className="text-xl text-white/70 font-medium">Professional Profile</p>
+              <p className="text-xl text-white/70 font-medium mb-6">Professional Profile</p>
+              <div className="h-px w-24 bg-white/30"></div>
             </motion.div>
 
             {/* First Paragraph - Full Width */}
@@ -65,7 +66,7 @@ export function About() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-6xl text-justify">
-                Results-driven Senior Software Engineer with 10 years of experience in backend development, microservices, cloud infrastructure, and automation. Proven track record of designing scalable systems, leading cross-functional teams, and mentoring engineers. Expertise in Java, Spring Boot, AWS, Azure, and DevOps with a strong focus on optimizing system performance and reliability.
+                With over a decade of experience in enterprise software engineering, I have established a strong foundation in developing and maintaining large-scale backend systems that power critical business operations. My expertise spans microservices architecture, cloud infrastructure management, and DevOps practices, with a particular strength in Java and Spring Boot ecosystems. Throughout my career, I have consistently delivered scalable solutions while fostering collaborative environments and contributing to technical excellence through mentorship and knowledge sharing.
               </p>
             </motion.div>
 
@@ -109,7 +110,7 @@ export function About() {
                 className="space-y-8"
               >
                 <p className="text-base sm:text-lg text-white/80 leading-relaxed text-justify">
-                  Passionate about Generative AI and automation, actively exploring prompt engineering and AI-powered solutions. Specialized in scalable microservices architecture, distributed systems, and API development. Strong advocate for automation, performance optimization, and high-performance computing.
+                  I am deeply engaged in exploring the transformative potential of Generative AI and advanced automation technologies, continuously expanding my knowledge in prompt engineering and AI-driven application development. My technical focus centers on architecting distributed systems, designing robust APIs, and implementing comprehensive automation strategies that enhance operational efficiency. I am committed to driving performance optimization initiatives and leveraging cutting-edge technologies to solve complex engineering challenges.
                 </p>
 
                 {/* CTA Button */}

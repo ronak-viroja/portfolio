@@ -56,7 +56,7 @@ export function Hero() {
               
               {/* Professional Summary */}
               <p className="text-xl sm:text-2xl text-[#0A1028]/80 leading-relaxed max-w-2xl font-light text-justify">
-                Results-driven engineer with 10 years of experience in backend development, microservices, cloud infrastructure, and automation. Passionate about Generative AI and building scalable systems.
+                A seasoned software engineering professional with a decade of expertise in enterprise backend systems, distributed microservices architecture, and cloud-native infrastructure. Specializing in building resilient, high-performance applications and driving technical innovation through automation and emerging technologies.
               </p>
               
               {/* CTA Button */}
