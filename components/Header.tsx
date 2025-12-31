@@ -98,7 +98,7 @@ export function Header() {
                   </Link>
                 </motion.div>
               ))}
-              {/* Contact Link - Points to Footer */}
+              {/* Connect Link - Points to Footer */}
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ export function Header() {
                   onClick={(e) => handleNavClick(e, "/#footer")}
                   className="relative text-sm font-medium text-white/80 hover:text-white transition-colors group"
                 >
-                  Contact
+                  Connect
                   <motion.span
                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#87CEEB] group-hover:w-full transition-all duration-300"
                     initial={{ width: 0 }}
@@ -165,7 +165,7 @@ export function Header() {
                       </Link>
                     </motion.div>
                   ))}
-                  {/* Contact Link - Points to Footer */}
+                  {/* Connect Link - Points to Footer */}
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -179,7 +179,7 @@ export function Header() {
                       }}
                       className="block py-2 text-sm font-medium text-white/80 hover:text-white transition-colors"
                     >
-                      Contact
+                      Connect
                     </Link>
                   </motion.div>
                 </div>
