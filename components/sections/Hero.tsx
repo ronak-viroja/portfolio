@@ -16,7 +16,7 @@ export function Hero() {
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset
       const startPosition = window.pageYOffset
       const distance = offsetPosition - startPosition
-      const duration = 1500 // 3x slower than default (500ms * 3)
+      const duration = 500 // 500ms for all internal navigation
       let start: number | null = null
 
       const easeInOutCubic = (t: number): number => {
@@ -41,7 +41,7 @@ export function Hero() {
   }
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center relative bg-[#e8ebf2] pb-0">
+    <section ref={ref} className="min-h-screen flex items-center relative bg-[#e8ebf2] pb-0 pt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-24 lg:py-32 relative z-10">
         <div className="max-w-[95%] lg:max-w-[1400px] mx-auto">
           {/* Two Column Layout - Grid: 1.2fr 1fr */}
@@ -120,6 +120,24 @@ export function Hero() {
             </motion.div>
           </div>
         </div>
+      </div>
+      
+      {/* Curved SVG Divider at the bottom */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden pointer-events-none z-10" style={{ marginBottom: '-1px' }}>
+        <svg
+          viewBox="0 0 1440 120"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-auto"
+          preserveAspectRatio="none"
+          style={{ display: "block" }}
+        >
+          <path
+            d="M0,120 L0,80 Q360,40 720,80 T1440,80 L1440,120 Z"
+            fill="#0A1028"
+            className="transition-colors duration-300"
+          />
+        </svg>
       </div>
     </section>
   )

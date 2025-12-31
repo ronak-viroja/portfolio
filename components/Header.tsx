@@ -30,7 +30,7 @@ export function Header() {
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset
         const startPosition = window.pageYOffset
         const distance = offsetPosition - startPosition
-        const duration = 1000
+        const duration = 500
         let start: number | null = null
 
         const easeInOutCubic = (t: number): number => {

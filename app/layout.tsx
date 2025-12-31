@@ -7,6 +7,7 @@ import { ScrollToTop } from "@/components/ScrollToTop"
 import { ScrollProgress } from "@/components/ScrollProgress"
 import { StructuredData } from "@/components/StructuredData"
 import { siteConfig } from "@/lib/constants"
+import { BottomMarquee } from "@/components/BottomMarquee"
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -65,6 +66,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // Check environment variable for marquee visibility (default: true)
+  const showMarquee = process.env.NEXT_PUBLIC_SHOW_MARQUEE !== "false"
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} ${inter.variable}`}>
@@ -73,6 +77,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        {showMarquee && <BottomMarquee />}
         <ScrollToTop />
       </body>
     </html>

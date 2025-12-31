@@ -9,8 +9,44 @@ export function Footer() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: false, margin: "-100px" })
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/#")) {
+      e.preventDefault()
+      const id = href.replace("/#", "")
+      const element = document.getElementById(id)
+      if (element) {
+        const headerOffset = 80
+        const elementPosition = element.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+        const startPosition = window.pageYOffset
+        const distance = offsetPosition - startPosition
+        const duration = 500 // 500ms for all internal navigation
+        let start: number | null = null
+
+        const easeInOutCubic = (t: number): number => {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+        }
+
+        const animation = (currentTime: number) => {
+          if (start === null) start = currentTime
+          const timeElapsed = currentTime - start
+          const progress = Math.min(timeElapsed / duration, 1)
+          const easedProgress = easeInOutCubic(progress)
+
+          window.scrollTo(0, startPosition + distance * easedProgress)
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation)
+          }
+        }
+
+        requestAnimationFrame(animation)
+      }
+    }
+  }
+
   return (
-    <footer id="footer" ref={ref} className="bg-[#0A1028] text-white py-20">
+    <footer id="footer" ref={ref} className="bg-[#0A1028] text-white py-20" style={{ paddingBottom: process.env.NEXT_PUBLIC_SHOW_MARQUEE !== 'false' ? '5rem' : undefined }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         <div className="max-w-[95%] lg:max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 mb-16">
@@ -64,6 +100,7 @@ export function Footer() {
                   { name: "About", href: "/#about" },
                   { name: "Experience", href: "/#experience" },
                   { name: "Education", href: "/#education" },
+                  { name: "Projects", href: "/#projects" },
                   { name: "Achievements", href: "/#achievements" },
                   { name: "IEEE Research Paper", href: "https://ieeexplore.ieee.org/document/7411268", external: true },
                 ].map((link, index) => (
@@ -72,6 +109,7 @@ export function Footer() {
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
+                    onClick={(e) => !link.external && handleLinkClick(e, link.href)}
                     initial={{ opacity: 0, x: -10 }}
                     animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}

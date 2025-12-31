@@ -39,7 +39,16 @@ yarn install
 pnpm install
 ```
 
-2. Run the development server:
+2. Create a `.env.local` file (optional, for local environment variables):
+```bash
+# Copy the example file
+cp .env.local.example .env.local
+
+# Or create it manually and add:
+# NEXT_PUBLIC_SHOW_MARQUEE=false  # Set to "false" to hide marquee
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -48,7 +57,9 @@ yarn dev
 pnpm dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+**Note:** If you change environment variables in `.env.local`, you need to restart the development server for changes to take effect.
 
 ## Project Structure
 
@@ -136,6 +147,26 @@ The site is configured for static export, so it can be deployed to:
 - Netlify
 - GitHub Pages
 - Any static hosting service
+
+## Environment Variables
+
+### Marquee Visibility
+
+Control the bottom marquee visibility with an environment variable:
+
+- `NEXT_PUBLIC_SHOW_MARQUEE` - Set to `"false"` to hide the bottom marquee. Defaults to `true` if not set.
+
+Example:
+```bash
+# Hide the marquee
+NEXT_PUBLIC_SHOW_MARQUEE=false
+
+# Show the marquee (default behavior)
+NEXT_PUBLIC_SHOW_MARQUEE=true
+# or simply don't set the variable
+```
+
+For deployment platforms (Cloudflare Pages, Vercel, etc.), add this as an environment variable in your project settings.
 
 ## Customization
 

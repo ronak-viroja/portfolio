@@ -17,6 +17,7 @@ export const navItems = [
   { name: "About", href: "/#about" },
   { name: "Work Experience", href: "/#experience" },
   { name: "Education", href: "/#education" },
+  { name: "Projects", href: "/#projects" },
   { name: "Achievements", href: "/#achievements" },
 ]
 

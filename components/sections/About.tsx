@@ -17,7 +17,7 @@ export function About() {
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset
       const startPosition = window.pageYOffset
       const distance = offsetPosition - startPosition
-      const duration = 1500 // 3x slower than default + 1 second for smoother transition
+      const duration = 500 // 500ms for all internal navigation
       let start: number | null = null
 
       const easeInOutCubic = (t: number): number => {
@@ -42,7 +42,7 @@ export function About() {
   }
 
   return (
-    <section id="about" className="py-24 bg-[#0A1028] text-white" ref={ref}>
+    <section id="about" className="py-24 bg-[#0A1028] text-white relative" ref={ref}>
       {/* Solid dark navy background - no curves, starts cleanly after Hero's curve */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10 pt-16">
         <div className="max-w-[95%] lg:max-w-[1400px] mx-auto">
@@ -134,6 +134,24 @@ export function About() {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Curved SVG Divider at the bottom */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden pointer-events-none z-10" style={{ marginBottom: '-1px' }}>
+        <svg
+          viewBox="0 0 1440 120"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-auto"
+          preserveAspectRatio="none"
+          style={{ display: "block" }}
+        >
+          <path
+            d="M0,120 L0,80 Q360,40 720,80 T1440,80 L1440,120 Z"
+            fill="#e8ebf2"
+            className="transition-colors duration-300"
+          />
+        </svg>
       </div>
     </section>
   )

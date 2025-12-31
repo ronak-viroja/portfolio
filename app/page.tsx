@@ -5,8 +5,8 @@ import { Hero } from "@/components/sections/Hero"
 import { About } from "@/components/sections/About"
 import { ExperienceSection } from "@/components/sections/Experience"
 import { EducationSection } from "@/components/sections/Education"
-import { SectionDivider } from "@/components/sections/SectionDivider"
 import { AchievementsSection } from "@/components/sections/Achievements"
+import { Projects } from "@/components/sections/Projects"
 
 const sectionVariants = {
   hidden: { opacity: 0 },
@@ -29,8 +29,10 @@ export default function Home() {
       <About />
       <ExperienceSection />
       <EducationSection />
-      <SectionDivider />
+      <Projects />
       <AchievementsSection />
+      {/* Small spacer between last section and footer */}
+      <div className="h-16 bg-[#e8ebf2]"></div>
     </motion.div>
   )
 }
